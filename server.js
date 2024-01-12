@@ -13,6 +13,7 @@ const methodOverride = require('method-override');
 
 require('dotenv').config();
 require('./config/database');
+require('./config/passport');
 
 const app = express();
 
