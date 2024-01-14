@@ -3,6 +3,12 @@
 <main>
   <h1><%= title %></h1>
   <p>ADD A CAMPGROUND</p>
+
+<form id="new-form" action="/camps" method="POST">
+  <label>Name:</label>
+  <input type="text" name="name">
+</form>
+
 </main>
 
 <%- include('../partials/footer') %>
