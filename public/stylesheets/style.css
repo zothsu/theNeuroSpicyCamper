@@ -4,6 +4,10 @@
   color: #424748;
 }
 
+a {
+  color: #077921;
+}
+
 body {
   margin: 0;
   height: 100vh;
@@ -17,18 +21,16 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-color: #E4EDD5;
-  background-color: rgba(228, 237, 213, .7);
+  background-color: #FFA800;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 20px 0 30px;
 }
 
-nav > img {
+a > img {
   width: 34px;
   object-fit: contain;
-  margin-right: auto;
 }
 
 body > main {
@@ -53,12 +55,12 @@ nav > a {
 }
 
 nav > a:hover:not(.active) {
-  color: white;
-  background-color: #424748;
+  color: 077921;
+  background-color: #ffffff;
 }
 
 nav > a.active {
-  color: white;
+  color: 077921;
   cursor: default;
 }
 
