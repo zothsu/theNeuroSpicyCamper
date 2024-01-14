@@ -9,6 +9,9 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 // GET /camps
 router.get('/camps', campCtrl.index);
 
+
+
+
 // Use ensureLoggedIn middleware to protect routes
 router.get('/new', ensureLoggedIn, campCtrl.new);
 router.get('/:id', campCtrl.show);

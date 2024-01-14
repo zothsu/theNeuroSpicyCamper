@@ -8,8 +8,8 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET all campgrounds. */
-router.get('/campgrounds', function(req, res, next) {
-  res.render('campgrounds', { title: 'The NeuroSpicy Camper' });
+router.get('/camps', function(req, res, next) {
+  res.render('camps', { title: 'The NeuroSpicy Camper' });
 });
 
 /* ADD A NEW campground. */
