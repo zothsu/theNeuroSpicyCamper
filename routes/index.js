@@ -33,9 +33,17 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/campgrounds',
-    failureRedirect: '/campgrounds'
+    successRedirect: '/camps',
+    failureRedirect: '/camps'
   }
 ));
+
+// OAuth logout route
+router.get('/logout', function(req, res){
+  req.logout(function() {
+    res.redirect('/camps');
+  });
+});
+
 
 module.exports = router;
