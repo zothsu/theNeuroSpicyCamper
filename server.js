@@ -6,14 +6,16 @@ const logger = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
 
-
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
-const methodOverride = require('method-override');
-
 require('dotenv').config();
 require('./config/database');
 require('./config/passport');
+
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const campsRouter = require('./routes/camps');
+
+const methodOverride = require('method-override');
+
 
 const app = express();
 
@@ -45,6 +47,8 @@ app.use(function (req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/', campsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

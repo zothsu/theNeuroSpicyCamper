@@ -1,14 +1,46 @@
-
 <%- include('../partials/header') %>
+
 <main>
   <h1><%= title %></h1>
   <p>ADD A CAMPGROUND</p>
 
-<form id="new-form" action="/camps" method="POST">
-  <label>Name:</label>
-  <input type="text" name="name">
-</form>
+  <form id="add-campground" action="/camps" method="POST">
+    <label for="camp-name">Name:</label>
+    <input type="text" name="camp-name">
+    
+    <label for="camp-description">Description:</label>
+    <input type="text" name="camp-description">
 
+    
+    <label for="total-sites">Total Sites:    </label>
+      <input type="number" name="total-sites" id="total-sites" required pattern="^([1-9]|[1-9][0-9]{1,2})$">
+
+
+
+    <label for="noise-level">Noise Level:</label>
+    <select name="noise-level">
+      <option value="">--Choose an option--</option>
+      <option value="1">1 = Quiet</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5 = Party Town</option>
+    </select>
+
+    <fieldset>
+      <legend>RV's allowed in Camp:</legend>
+      <div>
+        <input type="radio" name="rv" id="rv-yes" value="rv-yes" checked>
+        <label for="rv-yes">Yes</label>
+        
+        <input type="radio" name="rv" id="rv-no" value="rv-no">
+        <label for="rv-no">No</label>
+      </div>
+    </fieldset>
+    <br>
+    <button type="submit">Submit</button>
+
+  </form>
 </main>
 
 <%- include('../partials/footer') %>
