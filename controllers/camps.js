@@ -9,8 +9,8 @@ module.exports = {
 
 // GET TO INDEX
 async function index(req, res) {
-  res.render('camps/index', { 
-    title: 'ALL CAMPS', });
+  const camps = Camp.find({})
+  res.render('camps/index', {camps, title: 'ALL CAMPS', });
 }
 
 // GET FORM TO ADD CAMP
