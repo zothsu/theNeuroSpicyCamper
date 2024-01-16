@@ -6,19 +6,19 @@
 
   <form id="add-campground" action="/camps" method="POST">
     <label for="camp-name">Name:</label>
-    <input type="text" name="camp-name">
+    <input type="text" name="name">
     
     <label for="camp-description">Description:</label>
-    <input type="text" name="camp-description">
+    <input type="text" name="description">
 
     
     <label for="total-sites">Total Sites:    </label>
-      <input type="number" name="total-sites" id="total-sites" required pattern="^([1-9]|[1-9][0-9]{1,2})$">
+      <input type="number" name="totalSites" id="total-sites" required pattern="^([1-9]|[1-9][0-9]{1,2})$">
 
 
 
-    <label for="noise-level">Noise Level:</label>
-    <select name="noise-level">
+    <label for="noiseLevel">Noise Level:</label>
+    <select name="noiseLevel">
       <option value="">--Choose an option--</option>
       <option value="1">1 = Quiet</option>
       <option value="2">2</option>
@@ -30,10 +30,10 @@
     <fieldset>
       <legend>RV's allowed in Camp:</legend>
       <div>
-        <input type="radio" name="rv" id="rv-yes" value="rv-yes" checked>
+        <input type="radio" name="rvPermitted" id="rv-yes" value=true checked>
         <label for="rv-yes">Yes</label>
         
-        <input type="radio" name="rv" id="rv-no" value="rv-no">
+        <input type="radio" name="rvPermitted" id="rv-no" value=false>
         <label for="rv-no">No</label>
       </div>
     </fieldset>

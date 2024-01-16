@@ -4,11 +4,10 @@ const campCtrl = require('../controllers/camps');
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 /* GET all campgrounds. */
-router.get('/camps', function(req, res, next) {
-  res.render('camps', { title: 'ALL CAMPS' });
-});
+router.get('/', campCtrl.index);
 
-router.get('/camps/new', function(req, res, next) {
-  res.render('camps/new', {title: 'NEW CAMPS'})
-})
+router.get('/new', ensureLoggedIn, campCtrl.new)
+router.get('/:id',campCtrl.show);
+router.post('/', ensureLoggedIn, campCtrl.create);
+
 module.exports = router;

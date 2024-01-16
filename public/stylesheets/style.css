@@ -8,7 +8,7 @@ a {
   color: #077921;
 }
 
-body {
+/* body {
   margin: 0;
   height: 100vh;
   background-image: url(https://i.imgur.com/1vKiA9t.jpeg);
@@ -18,7 +18,10 @@ body {
     "nav"
     "main"
 }
-
+#show-page {
+  grid-area: main;
+  background-color: rgba(228, 237, 213, .8);
+}
 body > nav {
   grid-area: nav;
   background-color: #FFA800;
@@ -190,4 +193,4 @@ hr {
 .review-user img {
   border-radius: 50%;
   height: 40px;
-}
+} */
