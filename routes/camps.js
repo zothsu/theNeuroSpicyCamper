@@ -9,7 +9,11 @@ router.get('/new', ensureLoggedIn, campCtrl.new)
 
 //SHOW the CAMP
 router.get('/:id',campCtrl.show);
-router.get('/:id/edit', campCtrl.edit)
+
+//GET EDIT PAGE
+router.get('/:id/edit', campCtrl.editView)
+//PUT/PUSH EDITS
+router.put('/:id', campCtrl.edit)
 
 router.post('/', ensureLoggedIn, campCtrl.create);
 

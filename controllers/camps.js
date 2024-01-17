@@ -5,6 +5,7 @@ module.exports = {
     new: newCamp,
     show, 
     create, 
+    editView,
     edit
 };
 
@@ -23,9 +24,12 @@ async function show(req, res) {
   const camp = await Camp.findById(req.params.id)
   res.render('camps/show', {camp, title: 'Camground Detail',});
 }
-async function edit(req, res) {
+async function editView(req, res) {
   const camp = await Camp.findById(req.params.id)
   res.render('camps/edit', {camp, title: 'Edit a campground',});
+}
+async function edit(req, res) {
+  res.send('it worked')
 }
 
 async function create(req, res) {
