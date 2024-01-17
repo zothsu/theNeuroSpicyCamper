@@ -6,7 +6,8 @@ module.exports = {
     show, 
     create, 
     editView,
-    edit
+    edit,
+    delete: deleteCamp
 };
 
 // GET TO INDEX
@@ -48,4 +49,12 @@ async function create(req, res) {
       errorMsg: err.message
     });
   };
+}
+
+async function deleteCamp(req, res) {
+  const camp = await Camp.findOne(req.params.id)
+  if (!camp) return res.redirect('/camps')
+  camp.remove(req.params.id)
+  await camp.save();
+  res.redirect('/camps')
 }
