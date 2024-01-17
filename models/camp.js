@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const reviewSchema = new Schema({
   season: {
     type: String, 
-    enum: ['Spring', 'Early Summer/June', 'Mid-Summer', 'Late Summer/September', 'Fall', 'Winter']
+    enum: ['spring', 'earlySummer', 'midSummer', 'lateSummer', 'fall', 'winter']
   },
   noiseLevel: {
     type: Number,
@@ -16,8 +16,6 @@ const reviewSchema = new Schema({
     type: String,
     required: true
   },
-  // Don't forget to add the comma above then
-  // add the 3 new properties below
   user: {
     type: Schema.Types.ObjectId,
     ref: 'User',
@@ -46,7 +44,7 @@ const campSchema = new Schema({
   rvPermitted: { 
     type: Boolean, 
     default: true },
-    reviews: [reviewSchema]
+  reviews: [reviewSchema]
 }, {
   timestamps: true
 });

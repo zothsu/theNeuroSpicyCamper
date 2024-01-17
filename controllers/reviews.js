@@ -20,5 +20,5 @@ async function create(req, res) {
   } catch (err) {
     console.log(err);
   }
-  res.redirect(`/camps/${camps._id}`);
+  res.redirect(`/camps/${camp._id}`);
 };

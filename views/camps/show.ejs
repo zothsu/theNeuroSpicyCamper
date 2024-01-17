@@ -34,7 +34,16 @@
     </div>
     <div id="season">
       <label>Season:</label>
-      <textarea name="Season"></textarea>
+      <select name="season" id="season">
+        <option value="spring">Spring</option>
+        <option value="earlySummer">Early Summer/June</option>
+        <option value="midSummer">Mid-Summer</option>
+        <option value="lateSummer">Late Summer/September</option>
+        <option value="fall">Fall</option>
+        <option value="winter">Winter</option>
+      </select>
+
+
     </div>
     <div id="noise-level">
       <label>Noise Level:</label>
@@ -57,6 +66,7 @@
   <thead>
   <tr>
     <th>User</th>
+    <th>created at</th>
     <th>Season</th>
     <th>Noise Level</th>
     <th>Notes</th>
@@ -64,14 +74,13 @@
   </tr>
   </thead>
   <tbody>
-  <% let total = 0 %>
   <% camp.reviews.forEach(function(r) { %>
-    <% total += r.rating %>
     <tr>
       <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
       <td><%= r.createdAt.toLocaleDateString() %></td>
-      <td><%= r.content %></td>
-      <td><%= r.rating %></td>
+      <td><%= r.season %></td>
+      <td><%= r.noiseLevel %></td>
+      <td><%= r.notes %></td>
       <td>
         <% if (user?._id.equals(r.user)) { %>
           <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
@@ -81,10 +90,6 @@
         </td>
       </tr>
       <% }); %>
-      <tr>
-        <td colspan="3"></td>
-        <td><strong><%= (total / camp.reviews.length).toFixed(1) %></strong></td>
-      </tr>
     </tbody>
   </table>
   <% } else { %>
