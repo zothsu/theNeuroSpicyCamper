@@ -2,7 +2,7 @@ const Camp = require('../models/camp');
 
 module.exports = {
   create,
-}
+};
 
 async function create(req, res) {
   const camp = await Camp.findById(req.params.id);
@@ -21,4 +21,4 @@ async function create(req, res) {
     console.log(err);
   }
   res.redirect(`/camps/${camps._id}`);
-}
+};
