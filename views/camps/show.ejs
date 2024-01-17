@@ -18,5 +18,9 @@
     <%= camp.rvPermitted ? 'Yes' : 'No' %></div>
 </section>
 
+<form action="/camps/<%=camp._id %>?_method=DELETE" method="POST">
+  <button>DELETE</button>
+</form>
+
 <a href="/camps/<%=camp._id%>/edit">EDIT</a>
 <%- include('../partials/footer') %>

@@ -9,13 +9,16 @@ router.get('/new', ensureLoggedIn, campCtrl.new)
 
 router.post('/', ensureLoggedIn, campCtrl.create);
 
+//DELETE a CAMP
+router.delete('/:id', campCtrl.delete);
+
 //SHOW the CAMP
 router.get('/:id',campCtrl.show);
 
 //GET EDIT PAGE
-router.get('/:id/edit', campCtrl.editView)
+router.get('/:id/edit', campCtrl.editView);
 //PUT EDITS ON DB
-router.put('/:id', campCtrl.edit)
+router.put('/:id', campCtrl.edit);
 
 
 module.exports = router;
