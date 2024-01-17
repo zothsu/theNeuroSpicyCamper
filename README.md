@@ -22,16 +22,18 @@ show campground
 
 ## GETTING STARTED
 
+Getting Started: Include a link to the deployed app and your Trello board with the project's planning.
+
 ## NEXT STEPS
 
-- populate data in node
-- 
+Next Steps: Planned future enhancements (icebox items).
+
+Future Tracking
+- Yurts
+
 
 ## Thanks
 Icons provided by [icons8.com](https://icons8.com/icon/2512/campfire)
 
 
 
-☐ Getting Started: Include a link to the deployed app and your Trello board with the project's planning.
-
-☐ Next Steps: Planned future enhancements (icebox items).
