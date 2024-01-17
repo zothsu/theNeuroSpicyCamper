@@ -3,7 +3,9 @@
 <h1>
   <%= title %>
 </h1>
-<section>
+
+
+<section class="camp-details">
   <h2><%= camp.name %></h2>
   <div>Description: 
     <%= camp.description %></div>
@@ -22,55 +24,62 @@
 </form>
 <% } %>
 
-
-<h2>Reviews</h2>
-<!-- Add the line below -->
-
-<% if (user) { %>
-  <form id="add-review-form" method="POST" action="/movies/<%= movie._id %>/reviews">
-    <label>Review:</label>
-    <textarea name="content"></textarea>
-    <label>Rating:</label>
-    <select name="rating">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
+<section class="add-notes">  
+  <h3>Camp Notes</h3>
+  <% if (user) { %>
+  <form id="add-review-form" method="POST" action="/camps/<%= camp._id %>/reviews">
+    <div id="notes">
+      <label>Notes:</label>
+      <textarea name="notes"></textarea>
+    </div>
+    <div id="season">
+      <label>Season:</label>
+      <textarea name="Season"></textarea>
+    </div>
+    <div id="noise-level">
+      <label>Noise Level:</label>
+      <select name="rating">
+        <option value="1">1 = shhh</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 = Party Cirty!</option>
+      </select>
+    </div>
     <input type="submit" value="Add Review">
   </form>
-<!-- Add the line below -->
-<% } %>
+  <% } %>
+</section>
 
-<% if (camp.reviews.length) { %>
+<section class="read-notes">
+  <% if (camp.reviews.length) { %>
   <table>
-    <thead>
-      <tr>
-        <th>User</th>
-        <th>Season</th>
-        <th>Noise Level</th>
-        <th>Notes</th>
-        <th></th>
+  <thead>
+  <tr>
+    <th>User</th>
+    <th>Season</th>
+    <th>Noise Level</th>
+    <th>Notes</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% let total = 0 %>
+  <% camp.reviews.forEach(function(r) { %>
+    <% total += r.rating %>
+    <tr>
+      <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
+      <td><%= r.createdAt.toLocaleDateString() %></td>
+      <td><%= r.content %></td>
+      <td><%= r.rating %></td>
+      <td>
+        <% if (user?._id.equals(r.user)) { %>
+          <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+            <button type="submit">DELETE</button>
+          </form>
+          <% } %>
+        </td>
       </tr>
-    </thead>
-    <tbody>
-      <% let total = 0 %>
-      <% camp.reviews.forEach(function(r) { %>
-        <% total += r.rating %>
-        <tr>
-          <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
-          <td><%= r.createdAt.toLocaleDateString() %></td>
-          <td><%= r.content %></td>
-          <td><%= r.rating %></td>
-          <td>
-            <% if (user?._id.equals(r.user)) { %>
-              <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
-                <button type="submit">X</button>
-              </form>
-            <% } %>
-          </td>
-        </tr>
       <% }); %>
       <tr>
         <td colspan="3"></td>
@@ -78,10 +87,12 @@
       </tr>
     </tbody>
   </table>
-<% } else { %>
-  <h5>No Reviews Yet</h5>
-<% } %>
+  <% } else { %>
+    <h5>No Reviews Yet</h5>
+    <% } %>
+    
+</section>
   
-
-
-<%- include('../partials/footer') %>
+  
+  <%- include('../partials/footer') %>
+  

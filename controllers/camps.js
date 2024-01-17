@@ -25,6 +25,7 @@ async function show(req, res) {
   const camp = await Camp.findById(req.params.id)
   res.render('camps/show', {camp, title: 'Camground Detail',});
 }
+
 async function editView(req, res) {
   const camp = await Camp.findById(req.params.id)
   res.render('camps/edit', {camp, title: 'Edit a campground',});
