@@ -29,7 +29,8 @@ async function editView(req, res) {
   res.render('camps/edit', {camp, title: 'Edit a campground',});
 }
 async function edit(req, res) {
-  res.send('it worked')
+  const camp = await Camp.findById(req.params.id) 
+  res.redirect(`/camps/${camp._id}`)
 }
 
 async function create(req, res) {

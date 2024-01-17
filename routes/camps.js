@@ -7,14 +7,15 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 router.get('/', campCtrl.index);
 router.get('/new', ensureLoggedIn, campCtrl.new)
 
+router.post('/', ensureLoggedIn, campCtrl.create);
+
 //SHOW the CAMP
 router.get('/:id',campCtrl.show);
 
 //GET EDIT PAGE
 router.get('/:id/edit', campCtrl.editView)
-//PUT/PUSH EDITS
+//PUT EDITS ON DB
 router.put('/:id', campCtrl.edit)
 
-router.post('/', ensureLoggedIn, campCtrl.create);
 
 module.exports = router;
