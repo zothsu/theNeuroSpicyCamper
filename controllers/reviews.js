@@ -2,6 +2,7 @@ const Camp = require('../models/camp');
 
 module.exports = {
   create,
+  delete: deleteReview
 };
 
 async function create(req, res) {
@@ -22,3 +23,15 @@ async function create(req, res) {
   }
   res.redirect(`/camps/${camp._id}`);
 };
+
+async function deleteReview(req, res) {
+  const camp = await Camp.findOne({ 'reviews._id': req.params.id, 'reviews.user': req.user._id });
+  // Rogue user!
+  if (!camp) return res.redirect('/camps');
+  // Remove the review using the remove method available on Mongoose arrays
+  camp.reviews.remove(req.params.id);
+  // Save the updated camp doc
+  await camp.save();
+  // Redirect back to the camp's show view
+  res.redirect(`/camps/${camp._id}`);
+}

@@ -18,12 +18,13 @@
 </section>
 
 <% if (user?._id.equals(camp.user)) { %>
+
   <a href="/camps/<%=camp._id%>/edit">EDIT</a>
 <form action="/camps/<%=camp._id %>?_method=DELETE" method="POST">
   <button type="submit">DELETE</button>
 </form>
 <% } %>
-
+<hr>
 <section class="add-notes">  
   <h3>Camp Notes</h3>
   <% if (user) { %>
