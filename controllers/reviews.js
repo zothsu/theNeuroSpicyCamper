@@ -1,5 +1,4 @@
 const Camp = require('../models/camp');
-const camps = require('./camps');
 
 module.exports = {
   create,
