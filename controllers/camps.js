@@ -9,7 +9,7 @@ module.exports = {
 
 // GET TO INDEX
 async function index(req, res) {
-  const camps = Camp.find({})
+  const camps = await Camp.find({})
   res.render('camps/index', {camps, title: 'ALL CAMPS', });
 }
 

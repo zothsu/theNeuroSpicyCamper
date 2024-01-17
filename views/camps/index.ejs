@@ -3,6 +3,28 @@
 <main>
   <h1><%= title %></h1>
   <p>ALL CAMPGROUNDS</p>
+
+
+<table id="list">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <% console.log(camps) %>
+    <% camps.forEach(function(c) { %>
+      <tr>
+        <td><%= c.name %></td>
+        <td><a href="/camps/<%= c._id %>">DETAILS</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+
 </main>
 
 <%- include('../partials/footer') %>
