@@ -4,7 +4,8 @@ module.exports = {
     index,
     new: newCamp,
     show, 
-    create
+    create, 
+    edit
 };
 
 // GET TO INDEX
@@ -21,6 +22,10 @@ function newCamp(req, res) {
 async function show(req, res) {
   const camp = await Camp.findById(req.params.id)
   res.render('camps/show', {camp, title: 'Camground Detail',});
+}
+async function edit(req, res) {
+  const camp = await Camp.findById(req.params.id)
+  res.render('camps/edit', {camp, title: 'Edit a campground',});
 }
 
 async function create(req, res) {
