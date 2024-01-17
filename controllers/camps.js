@@ -52,9 +52,9 @@ async function create(req, res) {
 }
 
 async function deleteCamp(req, res) {
-  const camp = await Camp.findOne(req.params.id)
-  if (!camp) return res.redirect('/camps')
-  camp.remove(req.params.id)
-  await camp.save();
+  await Camp.findOneAndDelete(
+    {_id: req.params.id, user: req.user._id}
+  );
   res.redirect('/camps')
-}
+};
+
