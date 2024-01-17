@@ -29,7 +29,9 @@ async function editView(req, res) {
   res.render('camps/edit', {camp, title: 'Edit a campground',});
 }
 async function edit(req, res) {
-  const camp = await Camp.findById(req.params.id) 
+  const camp = await Camp.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+  });
   res.redirect(`/camps/${camp._id}`)
 }
 
