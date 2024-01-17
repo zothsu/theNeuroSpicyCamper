@@ -1,6 +1,35 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const reviewSchema = new Schema({
+  season: {
+    type: String, 
+    enum: ['Spring', 'Early Summer/June', 'Mid-Summer', 'Late Summer/September', 'Fall', 'Winter']
+  },
+  noiseLevel: {
+    type: Number,
+    min: 1,
+    max: 5,
+    default: 3
+  },
+  notes: {
+    type: String,
+    required: true
+  },
+  // Don't forget to add the comma above then
+  // add the 3 new properties below
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  userName: String,
+  userAvatar: String
+}, {
+  timestamps: true
+});
+
+
 const campSchema = new Schema({
   name: { 
     type: String, 
@@ -11,24 +40,13 @@ const campSchema = new Schema({
     min: 1,
     max: 9999
   },
-  noiseLevel: {
-    type: Number,
-    min: 1,
-    max: 5
-  },
   location: {
     type: String,
   },
   rvPermitted: { 
     type: Boolean, 
     default: true },
-    user: {
-      type: Schema.Types.ObjectId,
-      ref: 'User',
-      required: true
-    },
-    userName: String,
-    userAvatar: String
+    reviews: [reviewSchema]
 }, {
   timestamps: true
 });

@@ -3,24 +3,24 @@
 <h1>
   <%= title %>
 </h1>
-<section id="show-page">
-  <div>Name: 
-    <%= camp.name %></div>
+<section>
+  <h2><%= camp.name %></h2>
   <div>Description: 
     <%= camp.description %></div>
   <div>Total Sites: 
     <%= camp.totalSites %></div>
   <div>Location
     <%= camp.location %> </div>
-  <div>Noise Level
-    <%= camp.noiseLevel %></div>
   <div>RV's Permitted:
     <%= camp.rvPermitted ? 'Yes' : 'No' %></div>
 </section>
 
+<% if (user?._id.equals(camp.user)) { %>
+  <a href="/camps/<%=camp._id%>/edit">EDIT</a>
 <form action="/camps/<%=camp._id %>?_method=DELETE" method="POST">
   <button type="submit">DELETE</button>
 </form>
 
-<a href="/camps/<%=camp._id%>/edit">EDIT</a>
+<% } %>
+
 <%- include('../partials/footer') %>
