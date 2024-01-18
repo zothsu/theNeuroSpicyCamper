@@ -1,10 +1,8 @@
 
 <%- include('../partials/header') %>
-  <h1><%= title %></h1>
-  <p>ALL CAMPGROUNDS</p>
+<h1><%= title %></h1>
 
-
-<table id="list">
+<table>
   <thead>
     <tr>
       <th>Name</th>
@@ -13,8 +11,6 @@
     </tr>
   </thead>
   <tbody>
-    
-    <% console.log(camps) %>
     <% camps.forEach(function(c) { %>
       <tr>
         <td><%= c.name %></td>

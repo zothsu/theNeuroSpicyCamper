@@ -13,9 +13,9 @@
     <nav>
       <a href="/"><img width="48" height="48" src="https://img.icons8.com/color/48/campfire.png" alt="campfire"/></a>
       
-        <a href="/camps" <%- title === 'All Camps' ? 'class="active"' : '' %>>VIEW ALL CAMPGROUNDS</a> 
+        <a id="hover" href="/camps" <%- title === 'All Camps' ? 'class="active"' : '' %>>VIEW ALL CAMPGROUNDS</a> 
         <% if (user) { %>
-          <a href="/camps/new"	<%- title === 'Add Camp' ? 'class="active"' : '' %>>
+          <a id="hover" href="/camps/new"	<%- title === 'Add Camp' ? 'class="active"' : '' %>>
             ADD CAMPGROUND</a>
           <a href="/logout" class="login-with-google-btn">LOG OUT</a>
         <% } else { %>
