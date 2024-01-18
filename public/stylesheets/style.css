@@ -7,14 +7,16 @@
 }
 
 body {
-  /* background-image: url(https://i.imgur.com/1vKiA9t.jpeg); */
-  background-color: rgba(228, 237, 213, .8);
+  background-image: url(https://i.imgur.com/1vKiA9t.jpeg);
   overflow-y: scroll;
   padding: 2em;
 }
 
+main {
+  background-color: rgba(228, 237, 213, .8);
+  padding: 1em;
 
-
+}
 
 /* BODY
 body > main {
