@@ -7,16 +7,19 @@
     
   </head>
   <body>
-    <nav>
-      <a href="/"><img width="48" height="48" src="https://img.icons8.com/color/48/campfire.png" alt="campfire"/></a>
-      <div>
-        <a href="/camps" <%- title === 'All Camps' ? 'class="active"' : '' %>>ALL CAMPS</a> | 
-        <% if (user) { %>
-          <a href="/camps/new"	<%- title === 'Add Camp' ? 'class="active"' : '' %>>
-          ADD CAMP</a>
-          <a href="/logout" class="login-with-google-btn">LOG OUT</a>
-        <% } else { %>
-          <a href="/auth/google" class="login-with-google-btn">LOG IN</a>
-        <% } %>
-      </div>
-    </nav>
+    <header>
+      <nav>
+        <a href="/"><img width="48" height="48" src="https://img.icons8.com/color/48/campfire.png" alt="campfire"/></a>
+        <div>
+          <a href="/camps" <%- title === 'All Camps' ? 'class="active"' : '' %>>ALL CAMPS</a> | 
+          <% if (user) { %>
+            <a href="/camps/new"	<%- title === 'Add Camp' ? 'class="active"' : '' %>>
+            ADD CAMP</a>
+            <a href="/logout" class="login-with-google-btn">LOG OUT</a>
+          <% } else { %>
+            <a href="/auth/google" class="login-with-google-btn">LOG IN</a>
+          <% } %>
+        </div>
+      </nav>
+    </header>
+    <main>
