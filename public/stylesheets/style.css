@@ -72,28 +72,79 @@ a {
   color: var(--green)
 }
 
-a::
+.display {
+  background-color: rgba(228, 237, 213, .8);
+  margin: 1em;
+  padding: 1em;
+}
 
 /* FORMS */
 
-form {
-  background-color: rgba(228, 237, 213, .8);
-}
+
 table {
   font-size: 1.5rem;
   background-color: rgba(228, 237, 213, .8);
   padding: 2em;
+  margin: 5em;
 }
 
-table td {
+table td, table th {
   padding: 1em;
   text-align: center;
 }
 
+form {
+  background-color: rgba(228, 237, 213, .8);
+  min-width: 40vw;
+  padding: 1em;
+}
 
 
+.form-btns {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+}
 
-/* AVATAR 
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.form-group button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-group button:hover {
+  background-color: #45a049;
+}
+
+
+/* AVATAR */
 .review-user {
   display: flex;
   justify-content: center;
@@ -102,5 +153,6 @@ table td {
 
 .review-user img {
   border-radius: 50%;
-  height: 2em;
-}  */
+  height: 3em;
+  padding: .25em;
+} 

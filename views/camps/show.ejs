@@ -5,9 +5,12 @@
 </h1>
 
 
-<section class="camp-details">
+<section class="display">
   <h2><%= camp.name %></h2>
-  <div>Description: 
+  <div>
+    <span>
+      Description: 
+    </span>  
     <%= camp.description %></div>
   <div>Total Sites: 
     <%= camp.totalSites %></div>
@@ -15,17 +18,22 @@
     <%= camp.location %> </div>
   <div>RV's Permitted:
     <%= camp.rvPermitted ? 'Yes' : 'No' %></div>
+  
+  <div class="form-btns">
+    <% if (user?._id.equals(camp.user._id)) { %>
+      <a href="/camps/<%=camp._id%>/edit">
+        <button>EDIT</button></a>
+      <form action="/camps/<%=camp._id %>?_method=DELETE" method="POST">
+        <button type="submit">DELETE</button>
+      </form>
+    <% } %>
+  </div>
 </section>
 
-<% if (user?._id.equals(camp.user._id)) { %>
-  <a href="/camps/<%=camp._id%>/edit">EDIT</a>
-<form action="/camps/<%=camp._id %>?_method=DELETE" method="POST">
-  <button type="submit">DELETE</button>
-</form>
-<% } %>
+
 
 <hr>
-<section class="add-notes">  
+<section class="display">  
   <h3>Camp Notes</h3>
   <% if (user) { %>
   <form id="add-review-form" method="POST" action="/camps/<%= camp._id %>/reviews">
