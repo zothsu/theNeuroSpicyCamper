@@ -1,75 +1,69 @@
 <%- include('../partials/header') %>
 
-<h1>
-  <%= title %>
-</h1>
-
+<h1><%= title %></h1>
 
 <section class="display">
   <h2><%= camp.name %></h2>
   <div>
-    <span class="">
-      Description: 
-    </span>  
-    <%= camp.description %></div>
-  <div>Total Sites: 
-    <%= camp.totalSites %></div>
-  <div>Location
-    <%= camp.location %> </div>
-  <div>RV's Permitted:
-    <%= camp.rvPermitted ? 'Yes' : 'No' %></div>
-  
+    <span class=""> Description: </span>
+    <%= camp.description %>
+  </div>
+  <div>Total Sites: <%= camp.totalSites %></div>
+  <div>Location <%= camp.location %></div>
+  <div>RV's Permitted: <%= camp.rvPermitted ? 'Yes' : 'No' %></div>
+
   <div class="form-btns">
     <% if (user?._id.equals(camp.user._id)) { %>
-      <a href="/camps/<%=camp._id%>/edit">
-        <button>EDIT</button></a>
-      <form action="/camps/<%=camp._id %>?_method=DELETE" method="POST">
-        <button type="submit">DELETE</button>
-      </form>
+    <a href="/camps/<%=camp._id%>/edit"> <button>EDIT</button></a>
+    <form action="/camps/<%=camp._id %>?_method=DELETE" method="POST">
+      <button type="submit">DELETE</button>
+    </form>
     <% } %>
   </div>
 </section>
 
-
-
-<hr>
-<section class="display">  
+<hr />
+<section class="display">
   <h3>Camp Notes</h3>
   <% if (user) { %>
 
-  <form id="add-review-form" method="POST" action="/camps/<%= camp._id %>/reviews">
-<div>
-  <label class="bold">Notes:</label>
-  <textarea name="notes"></textarea>
-</div>
+  <form
+    id="add-review-form"
+    method="POST"
+    action="/camps/<%= camp._id %>/reviews"
+  >
+    <div>
+      <label class="bold">Notes:</label>
+      <textarea name="notes"></textarea>
+    </div>
 
-<div>
-  <label class="season">Season:</label>
+    <div>
+      <label class="season">Season:</label>
 
-  <select class="seasonInput" name="season" id="season">
-    <option value="spring">Spring</option>
-    <option value="earlySummer">Early Summer/June</option>
-    <option value="midSummer">Mid-Summer</option>
-    <option value="lateSummer">Late Summer/September</option>
-    <option value="fall">Fall</option>
-    <option value="winter">Winter</option>
-  </select>
-</div>  
+      <select class="seasonInput" name="season" id="season">
+        <option value="spring">Spring</option>
+        <option value="earlySummer">Early Summer/June</option>
+        <option value="midSummer">Mid-Summer</option>
+        <option value="lateSummer">Late Summer/September</option>
+        <option value="fall">Fall</option>
+        <option value="winter">Winter</option>
+      </select>
+    </div>
 
-<div>
-  <label class="noise">Noise Level:</label>
-  <select class="noiseInput" name="rating">
-    <option value="1">1 = shhh</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5 = Party Cirty!</option>
-  </select>
-</div>
+    <div>
+      <label class="noise">Noise Level:</label>
+      <select class="noiseInput" name="rating">
+        <option value="1">1 = shhh</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 = Party Cirty!</option>
+      </select>
+    </div>
 
-  <div>
-    <input id="noteBtn" class="submit" type="submit" value="Add Note">
-  </div>
+    <div>
+      <input id="noteBtn" class="submit" type="submit" value="Add Note" />
+    </div>
   </form>
   <% } %>
 </section>
@@ -77,26 +71,32 @@
 <section class="read-notes">
   <% if (camp.reviews.length) { %>
   <table>
-  <thead>
-  <tr>
-    <th>User</th>
-    <th>created at</th>
-    <th>Season</th>
-    <th>Noise Level</th>
-    <th>Notes</th>
-    <th></th>
-  </tr>
-  </thead>
-  <tbody>
-  <% camp.reviews.forEach(function(r) { %>
-    <tr>
-      <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
-      <td><%= r.createdAt.toLocaleDateString() %></td>
-      <td><%= r.season %></td>
-      <td><%= r.noiseLevel %></td>
-      <td><%= r.notes %></td>
-      <td>
-        <% if (user?._id.equals(r.user)) { %>
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>created at</th>
+        <th>Season</th>
+        <th>Noise Level</th>
+        <th>Notes</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% camp.reviews.forEach(function(r) { %>
+      <tr>
+        <td class="review-user">
+          <img
+            alt="avatar"
+            src="<%= r.userAvatar %>"
+            referrerpolicy="no-referrer"
+          /><%= r.userName %>
+        </td>
+        <td><%= r.createdAt.toLocaleDateString() %></td>
+        <td><%= r.season %></td>
+        <td><%= r.noiseLevel %></td>
+        <td><%= r.notes %></td>
+        <td>
+          <% if (user?._id.equals(r.user)) { %>
           <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
             <button type="submit">DELETE</button>
           </form>
@@ -107,11 +107,8 @@
     </tbody>
   </table>
   <% } else { %>
-    <h5>No Reviews Yet</h5>
-    <% } %>
-    
+  <h5>No Reviews Yet</h5>
+  <% } %>
 </section>
-  
-  
-  <%- include('../partials/footer') %>
-  
+
+<%- include('../partials/footer') %>

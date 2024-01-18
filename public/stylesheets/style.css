@@ -6,14 +6,14 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Advent Pro', sans-serif;
-  font-family: 'Titillium Web', sans-serif;
-  color: var(--green)
+  font-family: "Advent Pro", sans-serif;
+  font-family: "Titillium Web", sans-serif;
+  color: var(--green);
 }
 
 body {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "nav"
     "main"
     "main"
@@ -23,7 +23,6 @@ body {
   background-size: cover;
   overflow-y: scroll;
   padding: 2em;
-  
 }
 
 main {
@@ -38,24 +37,28 @@ main {
 nav {
   grid-area: nav;
   position: fixed;
-  top: 0; left: 0; right: 0;
-background-color: var(--orange);
-display: flex;
-justify-content: space-between;
-align-items: center;
-font-weight: 800;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--orange);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 800;
 }
 
 nav #hover:hover {
   background-color: white;
-  padding: .25em;
-  border-radius: .7em;
-  color: var(--green)
+  padding: 0.25em;
+  border-radius: 0.7em;
+  color: var(--green);
 }
 
 footer {
   position: fixed;
-  bottom: 0; left: 0; right: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   grid-area: footer;
   display: flex;
   justify-content: center;
@@ -66,20 +69,19 @@ footer {
 
 button {
   background-color: var(--orange);
-  border-radius: .5em;
-  border-width: .09em;
+  border-radius: 0.5em;
+  border-width: 0.09em;
 }
 a {
   text-decoration: none;
-  color: var(--green)
+  color: var(--green);
 }
 
 .display {
-  background-color: rgba(228, 237, 213, .8);
+  background-color: rgba(228, 237, 213, 0.8);
   margin: 1em;
   padding: 1em;
 }
-
 
 #add-review-form {
   display: flex;
@@ -88,36 +90,34 @@ a {
 #add-review-form div {
   display: flex;
   flex-grow: 1;
-  flex-direction:column
+  flex-direction: column;
 }
 
 #noteBtn {
   margin-top: 1em;
 }
 
-
 /* FORMS */
-
 
 table {
   font-size: 1.5rem;
-  background-color: rgba(228, 237, 213, .8);
+  background-color: rgba(228, 237, 213, 0.8);
   padding: 2em;
   margin: 5em;
 }
 
-table td, table th {
+table td,
+table th {
   padding: 1em;
   text-align: center;
 }
 
 .form-group {
-  background-color: rgba(228, 237, 213, .8);
+  background-color: rgba(228, 237, 213, 0.8);
   min-width: 40vw;
   padding: 1em;
   margin: 2em;
 }
-
 
 .form-btns {
   display: flex;
@@ -162,7 +162,6 @@ table td, table th {
   background-color: #45a049;
 }
 
-
 /* AVATAR */
 .review-user {
   display: flex;
@@ -173,5 +172,5 @@ table td, table th {
 .review-user img {
   border-radius: 50%;
   height: 3em;
-  padding: .25em;
-} 
+  padding: 0.25em;
+}
