@@ -44,7 +44,12 @@ const campSchema = new Schema({
   rvPermitted: { 
     type: Boolean, 
     default: true },
-  reviews: [reviewSchema]
+  reviews: [reviewSchema],
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
 }, {
   timestamps: true
 });

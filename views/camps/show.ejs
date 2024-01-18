@@ -17,13 +17,13 @@
     <%= camp.rvPermitted ? 'Yes' : 'No' %></div>
 </section>
 
-<% if (user?._id.equals(camp.user)) { %>
-
+<% if (user?._id.equals(camp.user._id)) { %>
   <a href="/camps/<%=camp._id%>/edit">EDIT</a>
 <form action="/camps/<%=camp._id %>?_method=DELETE" method="POST">
   <button type="submit">DELETE</button>
 </form>
 <% } %>
+
 <hr>
 <section class="add-notes">  
   <h3>Camp Notes</h3>
