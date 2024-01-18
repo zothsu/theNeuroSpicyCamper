@@ -37,6 +37,8 @@ main {
 
 nav {
   grid-area: nav;
+  position: fixed;
+  top: 0; left: 0; right: 0;
 background-color: var(--orange);
 display: flex;
 justify-content: space-between;
@@ -78,6 +80,22 @@ a {
   padding: 1em;
 }
 
+
+#add-review-form {
+  display: flex;
+  flex-direction: column;
+}
+#add-review-form div {
+  display: flex;
+  flex-grow: 1;
+  flex-direction:column
+}
+
+#noteBtn {
+  margin-top: 1em;
+}
+
+
 /* FORMS */
 
 
@@ -93,10 +111,11 @@ table td, table th {
   text-align: center;
 }
 
-form {
+.form-group {
   background-color: rgba(228, 237, 213, .8);
   min-width: 40vw;
   padding: 1em;
+  margin: 2em;
 }
 
 

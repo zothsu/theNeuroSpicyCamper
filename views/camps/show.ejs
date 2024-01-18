@@ -8,7 +8,7 @@
 <section class="display">
   <h2><%= camp.name %></h2>
   <div>
-    <span>
+    <span class="">
       Description: 
     </span>  
     <%= camp.description %></div>
@@ -36,35 +36,40 @@
 <section class="display">  
   <h3>Camp Notes</h3>
   <% if (user) { %>
+
   <form id="add-review-form" method="POST" action="/camps/<%= camp._id %>/reviews">
-    <div id="notes">
-      <label>Notes:</label>
-      <textarea name="notes"></textarea>
-    </div>
-    <div id="season">
-      <label>Season:</label>
-      <select name="season" id="season">
-        <option value="spring">Spring</option>
-        <option value="earlySummer">Early Summer/June</option>
-        <option value="midSummer">Mid-Summer</option>
-        <option value="lateSummer">Late Summer/September</option>
-        <option value="fall">Fall</option>
-        <option value="winter">Winter</option>
-      </select>
+<div>
+  <label class="bold">Notes:</label>
+  <textarea name="notes"></textarea>
+</div>
 
+<div>
+  <label class="season">Season:</label>
 
-    </div>
-    <div id="noise-level">
-      <label>Noise Level:</label>
-      <select name="rating">
-        <option value="1">1 = shhh</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5 = Party Cirty!</option>
-      </select>
-    </div>
-    <input type="submit" value="Add Review">
+  <select class="seasonInput" name="season" id="season">
+    <option value="spring">Spring</option>
+    <option value="earlySummer">Early Summer/June</option>
+    <option value="midSummer">Mid-Summer</option>
+    <option value="lateSummer">Late Summer/September</option>
+    <option value="fall">Fall</option>
+    <option value="winter">Winter</option>
+  </select>
+</div>  
+
+<div>
+  <label class="noise">Noise Level:</label>
+  <select class="noiseInput" name="rating">
+    <option value="1">1 = shhh</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5 = Party Cirty!</option>
+  </select>
+</div>
+
+  <div>
+    <input id="noteBtn" class="submit" type="submit" value="Add Note">
+  </div>
   </form>
   <% } %>
 </section>

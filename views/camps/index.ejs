@@ -14,7 +14,9 @@
     <% camps.forEach(function(c) { %>
       <tr>
         <td><%= c.name %></td>
-        <td><a href="/camps/<%= c._id %>">DETAILS</a></td>
+        <td><a href="/camps/<%= c._id %>"><button>
+          DETAILS
+        </button></a></td>
 
       </tr>
       <% }); %>
