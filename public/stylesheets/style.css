@@ -2,7 +2,10 @@
   box-sizing: border-box;
   font-family: Helvetica;
   color: #424748;
+  font-family: 'Advent Pro', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
+
 a {
   color: #077921;
 }
