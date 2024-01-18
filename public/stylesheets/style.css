@@ -1,6 +1,7 @@
 :root {
   --orange: #ffa800;
   --green: #123829;
+  --dark-orange: ##2e2d23;
 }
 
 * {
@@ -41,6 +42,7 @@ align-items: center;
 
 footer {
   grid-area: footer
+  background-color: var(--dark-orange)
 }
 
 button {
