@@ -4,21 +4,24 @@
 
 ## SCREENSHOTS
 
-log in page
-
 list of campgrounds
 
 show campground
 
+## PLANNING
+
+[https://trello.com/](https://trello.com/b/BTy4SfdR/the-neurospicy-camper)
+
 ## TECHNOLOGY USED
 
 - JavaScript
-- HTML/CSS
 - EJS (EspressJS)
+- HTML/CSS
 - Mongo DB
 - Mongoose
 - NPM
 - Nodemon
+- Git
 
 ## GETTING STARTED
 
