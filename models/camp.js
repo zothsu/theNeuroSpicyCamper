@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema({
   season: {
-    type: String, 
+    type: String,
     enum: ['spring', 'earlySummer', 'midSummer', 'lateSummer', 'fall', 'winter']
   },
   noiseLevel: {
@@ -29,9 +29,10 @@ const reviewSchema = new Schema({
 
 
 const campSchema = new Schema({
-  name: { 
-    type: String, 
-    required: true },
+  name: {
+    type: String,
+    required: true
+  },
   description: String,
   totalSites: {
     type: Number,
@@ -41,9 +42,10 @@ const campSchema = new Schema({
   location: {
     type: String,
   },
-  rvPermitted: { 
-    type: Boolean, 
-    default: true },
+  rvPermitted: {
+    type: Boolean,
+    default: true
+  },
   reviews: [reviewSchema],
   user: {
     type: Schema.Types.ObjectId,

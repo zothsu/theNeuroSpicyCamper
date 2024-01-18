@@ -20,5 +20,4 @@ router.get('/:id',campCtrl.show);
 router.get('/:id/edit', ensureLoggedIn, campCtrl.editView);
 router.put('/:id', ensureLoggedIn, campCtrl.edit);
 
-
 module.exports = router;
