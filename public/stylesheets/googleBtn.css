@@ -1,8 +1,8 @@
 .login-with-google-btn {
   transition: background-color .3s, box-shadow .3s;
-  padding: .5em 16px .5em 42px;
+  padding: .5em 1em .5em 2.5em;
   border: none;
-  border-radius: 3px;
+  border-radius: .5em;
   box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
   
   color: #757575;
