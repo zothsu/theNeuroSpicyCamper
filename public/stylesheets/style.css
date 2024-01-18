@@ -4,10 +4,51 @@
   color: #424748;
 }
 
+body {
+  margin: 0;
+  height: 100vh;
+  background-image: url(https://i.imgur.com/1vKiA9t.jpeg);
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas: 
+  "nav"
+  "main"
+}
+
 a > img {
   object-fit: contain;
-  max-width: 2em;
+  max-width: 5em;
 }
+
+
+
+/* NAVIGATION */
+body > nav {
+  grid-area: nav;
+  background-color: #FFA800;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
+
+nav > a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav > a:hover:not(.active) {
+  color: 077921;
+  background-color: #ffffff;
+}
+
+nav > a.active {
+  color: 077921;
+}
+
 
 .login-with-google-btn {
   transition: background-color .3s, box-shadow .3s;
@@ -42,7 +83,7 @@ a > img {
       0 2px 4px rgba(0, 0, 0, .25),
       0 0 0 3px #c8dafc;
   }
-  
+}
 
 
 /* 
@@ -51,43 +92,7 @@ a {
   color: #077921;
 }
 
-body {
-  margin: 0;
-  height: 100vh;
-  background-image: url(https://i.imgur.com/1vKiA9t.jpeg);
-  display: grid;
-  grid-template-rows: 50px 1fr;
-  grid-template-areas: 
-  "nav"
-  "main"
-}
 
-/* NAVIGATION
-body > nav {
-  grid-area: nav;
-  background-color: #FFA800;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px 0 30px;
-}
-
-
-nav > a {
-  margin: 20px;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-nav > a:hover:not(.active) {
-  color: 077921;
-  background-color: #ffffff;
-}
-
-nav > a.active {
-  color: 077921;
-}
 
 
 
