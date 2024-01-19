@@ -5,12 +5,27 @@
 <section class="display">
   <h2><%= camp.name %></h2>
   <div>
-    <span class=""> Description: </span>
-    <%= camp.description %>
+    <span class="bold"> Description: </span>
   </div>
-  <div>Total Sites: <%= camp.totalSites %></div>
-  <div>Location <%= camp.location %></div>
-  <div>RV's Permitted: <%= camp.rvPermitted ? 'Yes' : 'No' %></div>
+  <div><%= camp.description %></div>
+  <div><span class="bold"> Total Sites: </span></div>
+    <div>
+      <%= camp.totalSites %>
+    </div>
+  <div><span class="bold"> Location </span> 
+  </div>
+  <div>
+    <%= camp.location %>
+
+  </div>
+  <div>
+    <span class="bold"> RV's Permitted: </span> 
+  </div>
+  <div>
+    <%= camp.rvPermitted ? 'Yes' :
+    'No' %>
+
+  </div>
 
   <div id="form-btns">
     <% if (user?._id.equals(camp.user._id)) { %>
@@ -107,7 +122,7 @@
     </tbody>
   </table>
   <% } else { %>
-  <h5>No Reviews Yet</h5>
+  <h3 id="no-reviews">No Reviews Yet</h3>
   <% } %>
 </section>
 
