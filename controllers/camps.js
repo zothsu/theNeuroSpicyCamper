@@ -23,12 +23,12 @@ function newCamp(req, res) {
 
 async function show(req, res) {
   const camp = await Camp.findById(req.params.id)
-  res.render('camps/show', {camp, title: 'Camground Detail',});
+  res.render('camps/show', {camp, title: 'CAMPGROUND DETAIL',});
 }
 
 async function editView(req, res) {
   const camp = await Camp.findById(req.params.id)
-  res.render('camps/edit', {camp, title: 'Edit a campground',});
+  res.render('camps/edit', {camp, title: 'EDIT CAMPGROUND',});
 }
 async function edit(req, res) {
   const camp = await Camp.findByIdAndUpdate(req.params.id, req.body, {
