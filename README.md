@@ -31,7 +31,7 @@
 
 ## GETTING STARTED
 
-Project deployed on [Heroku](https://trello.com/b/BTy4SfdR/the-neurospicy-camper)
+Project deployed on [Heroku](http://theneurospicycamper-9a6b944e5aa8.herokuapp.com/)
 
 Project planning on [Trello Board](https://trello.com/b/BTy4SfdR/the-neurospicy-camper)
 
