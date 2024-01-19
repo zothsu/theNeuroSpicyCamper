@@ -1,6 +1,6 @@
 # theNeuroSpicyCamper
 
-> Personal note taking app for  campgrounds. Application designed to track properties that are important to neurodivergent peoples.  
+> Personal note taking app for  campgrounds, designed to track properties that are important to neurodivergent peoples. Neurodivergent people are often more sensitive to noise, crowds and machine noise from generators. 
 
 ## Screenshots
 | Description | Screenshot |
