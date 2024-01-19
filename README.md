@@ -2,6 +2,8 @@
 
 > Application designed to...
 
+A campground review site for neurodivegent people who need to track 
+
 ## SCREENSHOTS
 
 list of campgrounds
@@ -37,6 +39,8 @@ Future Tracking
 
 ## Thanks
 Icons provided by [icons8.com](https://icons8.com/icon/2512/campfire)
+
+[Favicon](https://favicon.io/favicon-converter/)
 
 
 
