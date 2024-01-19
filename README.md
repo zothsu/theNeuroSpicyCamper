@@ -38,6 +38,7 @@ Project planning on [Trello Board](https://trello.com/b/BTy4SfdR/the-neurospicy-
 
 Wireframe design on [Canva](https://www.canva.com/design/DAF5mGitbGY/6Q9J8yzPjiChQvm81Rr0CA/edit)
 
+---
 
 <details open>
 <summary> How to Create a Campground </summary>
@@ -53,21 +54,20 @@ Wireframe design on [Canva](https://www.canva.com/design/DAF5mGitbGY/6Q9J8yzPjiC
 
 ## NEXT STEPS
 
-Next Steps: Planned future enhancements (icebox items).
-
 Future Tracking
 - Yurts
 - Bathroom amenities
 - Potable water 
 
 Future enhancements 
-- Move noise level to note area
+- Move noise level to note area.
+- AAU I want to <3 Campsites that were exceptional. 
 
 
 ## Thanks
 Icons provided by [icons8.com](https://icons8.com/icon/2512/campfire)
 
-[Favicon](https://favicon.io/favicon-converter/)
+Favicon converted by [favicon.io](https://favicon.io/favicon-converter/)
 
 
 
