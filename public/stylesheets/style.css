@@ -122,6 +122,11 @@ margin-top: 1em;
   margin-bottom: 2em;
 }
 
+.homepage {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 2em;
+}
 table {
   font-size: 1.5rem;
   background-color: rgba(228, 237, 213, 0.8);
