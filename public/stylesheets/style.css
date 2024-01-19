@@ -77,6 +77,15 @@ a {
   color: var(--green);
 }
 
+.campground-form, .form-group {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(228, 237, 213, 0.8);
+  padding: 1em;
+  margin: 1em;
+}
+
+
 .display {
   background-color: rgba(228, 237, 213, 0.8);
   margin: 1em;
@@ -97,7 +106,6 @@ a {
   margin-top: 1em;
 }
 
-/* FORMS */
 
 table {
   font-size: 1.5rem;
@@ -112,55 +120,6 @@ table th {
   text-align: center;
 }
 
-.form-group {
-  background-color: rgba(228, 237, 213, 0.8);
-  min-width: 40vw;
-  padding: 1em;
-  margin: 2em;
-}
-
-.form-btns {
-  display: flex;
-  justify-content: space-around;
-  padding: 1em;
-}
-
-.form-group label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.form-group textarea {
-  width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.form-group button {
-  background-color: #4caf50;
-  color: #fff;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.form-group button:hover {
-  background-color: #45a049;
-}
 
 /* AVATAR */
 .review-user {

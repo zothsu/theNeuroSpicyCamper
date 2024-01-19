@@ -1,9 +1,8 @@
 <%- include('../partials/header') %>
 
 <h1><%= title %></h1>
-<p>EDIT A CAMPGROUND</p>
-
 <form
+  class="campground-form"
   id="add-campground"
   action="/camps/<%=camp._id%>?_method=PUT"
   method="POST"
@@ -36,7 +35,7 @@
     <option value="4">4</option>
     <option value="5">5 = Party Town</option>
   </select>
-  
+
   <fieldset>
     <legend>RV's allowed in Camp:</legend>
     <div>
@@ -52,9 +51,8 @@
       <label for="rv-no">No</label>
     </div>
   </fieldset>
-  <br />
+
   <button>UPDATE CAMP</button>
 </form>
-<a href="/camps">Back to all camps</a>
 
 <%- include('../partials/footer') %>

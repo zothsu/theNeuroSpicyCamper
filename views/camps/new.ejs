@@ -1,38 +1,36 @@
 <%- include('../partials/header') %>
 
-<main>
-  <h1><%= title %></h1>
-  <form class="form-group" id="new-form" action="/camps" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" name="name" />
+<h1><%= title %></h1>
+<form class="form-group" id="new-form" action="/camps" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" name="name" />
 
-    <label for="description">Description:</label>
-    <input type="text" name="description" />
+  <label for="description">Description:</label>
+  <input type="text" name="description" />
 
-    <label for="total-sites">Total Sites: </label>
-    <input
-      type="number"
-      name="totalSites"
-      id="total-sites"
-      required
-      pattern="^([1-9]|[1-9][0-9]{1,2})$"
-    />
+  <label for="total-sites">Total Sites: </label>
+  <input
+    type="number"
+    name="totalSites"
+    id="total-sites"
+    required
+    pattern="^([1-9]|[1-9][0-9]{1,2})$"
+  />
 
-    <label for="camp-location">Location:</label>
-    <input type="text" name="location" />
+  <label for="camp-location">Location:</label>
+  <input type="text" name="location" />
 
-    <div>
-      <label>RV's allowed in Camp:</label>
-      <input type="radio" name="rvPermitted" id="rv-yes" value="true" checked />
-      <label for="rv-yes">Yes</label>
+  <div>
+    <label>RV's allowed in Camp:</label>
+    <input type="radio" name="rvPermitted" id="rv-yes" value="true" checked />
+    <label for="rv-yes">Yes</label>
 
-      <input type="radio" name="rvPermitted" id="rv-no" value="false" />
-      <label for="rv-no">No</label>
-    </div>
+    <input type="radio" name="rvPermitted" id="rv-no" value="false" />
+    <label for="rv-no">No</label>
+  </div>
 
-    <br />
-    <button type="submit">Submit</button>
-  </form>
-</main>
+  <br />
+  <button type="submit">Submit</button>
+</form>
 
 <%- include('../partials/footer') %>
