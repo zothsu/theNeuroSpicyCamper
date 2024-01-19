@@ -85,6 +85,11 @@ a {
   margin: 1em;
 }
 
+#form-btns {
+display: flex;
+justify-content: space-around;
+margin-top: 1em;
+}
 
 .display {
   background-color: rgba(228, 237, 213, 0.8);

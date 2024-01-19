@@ -12,7 +12,7 @@
   <div>Location <%= camp.location %></div>
   <div>RV's Permitted: <%= camp.rvPermitted ? 'Yes' : 'No' %></div>
 
-  <div class="form-btns">
+  <div id="form-btns">
     <% if (user?._id.equals(camp.user._id)) { %>
     <a href="/camps/<%=camp._id%>/edit"> <button>EDIT</button></a>
     <form action="/camps/<%=camp._id %>?_method=DELETE" method="POST">
