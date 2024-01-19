@@ -87,6 +87,8 @@ a {
   background-color: rgba(228, 237, 213, 0.8);
   padding: 1em;
   margin: 1em;
+  font-size: 1.5rem;
+  min-width: 20em;
 }
 
 #form-btns {
@@ -100,6 +102,7 @@ margin-top: 1em;
   margin: 1em;
   padding: 1em;
   font-size: 1.5rem;
+  min-width: 20em;
 }
 
 #add-review-form {
