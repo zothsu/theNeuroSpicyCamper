@@ -8,25 +8,18 @@
     <span class="bold"> Description: </span>
   </div>
   <div><%= camp.description %></div>
-  <div><span class="bold"> Total Sites: </span></div>
-    <div>
-      <%= camp.totalSites %>
-    </div>
-  <div><span class="bold"> Location </span> 
-  </div>
   <div>
-    <%= camp.location %>
-
+    <span class="bold"> Total Sites: </span>
   </div>
+  <div><%= camp.totalSites %></div>
   <div>
-    <span class="bold"> RV's Permitted: </span> 
+    <span class="bold"> Location</span>
   </div>
+  <div><%= camp.location %></div>
   <div>
-    <%= camp.rvPermitted ? 'Yes' :
-    'No' %>
-
+    <span class="bold"> RV's Permitted: </span>
   </div>
-
+  <div><%= camp.rvPermitted ? 'Yes' : 'No' %></div>
   <div id="form-btns">
     <% if (user?._id.equals(camp.user._id)) { %>
     <a href="/camps/<%=camp._id%>/edit"> <button>EDIT</button></a>
@@ -37,11 +30,9 @@
   </div>
 </section>
 
-<hr />
 <section class="display">
   <h3>Camp Notes</h3>
   <% if (user) { %>
-
   <form
     id="add-review-form"
     method="POST"
@@ -51,10 +42,8 @@
       <label class="bold">Notes:</label>
       <textarea name="notes"></textarea>
     </div>
-
     <div>
       <label class="season">Season:</label>
-
       <select class="seasonInput" name="season" id="season">
         <option value="spring">Spring</option>
         <option value="earlySummer">Early Summer/June</option>
@@ -64,7 +53,6 @@
         <option value="winter">Winter</option>
       </select>
     </div>
-
     <div>
       <label class="noise">Noise Level:</label>
       <select class="noiseInput" name="rating">
@@ -75,7 +63,6 @@
         <option value="5">5 = Party Cirty!</option>
       </select>
     </div>
-
     <div>
       <input id="noteBtn" class="submit" type="submit" value="Add Note" />
     </div>

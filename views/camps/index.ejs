@@ -1,7 +1,6 @@
-
 <%- include('../partials/header') %>
-<h1><%= title %></h1>
 
+<h1><%= title %></h1>
 <table>
   <thead>
     <tr>
@@ -12,17 +11,14 @@
   </thead>
   <tbody>
     <% camps.forEach(function(c) { %>
-      <tr>
-        <td><%= c.name %></td>
-        <td><a href="/camps/<%= c._id %>"><button>
-          DETAILS
-        </button></a></td>
-      </tr>
+    <tr>
+      <td><%= c.name %></td>
+      <td>
+        <a href="/camps/<%= c._id %>"><button>DETAILS</button></a>
+      </td>
+    </tr>
     <% }); %>
   </tbody>
 </table>
-
-
-</main>
 
 <%- include('../partials/footer') %>
