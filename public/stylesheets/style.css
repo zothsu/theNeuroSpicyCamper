@@ -41,18 +41,10 @@ nav {
   left: 0;
   right: 0;
   background-color: var(--orange);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
   font-weight: 800;
 }
 
-nav #hover:hover {
-  background-color: white;
-  padding: 0.25em;
-  border-radius: 0.7em;
-  color: var(--green);
-}
 
 footer {
   position: fixed;
