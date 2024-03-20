@@ -46,6 +46,8 @@ nav {
   right: 0;
   background-color: var(--orange);
   font-weight: 400;
+  align-items: center;
+  z-index: 100;
 }
 
 
@@ -59,7 +61,8 @@ footer {
   justify-content: center;
   background-color: var(--dark-orange);
   color: var(--orange);
-  padding: 2em;
+  padding: 1em;
+  font-size: 1rem;
 }
 
 button {
@@ -151,3 +154,4 @@ table th {
   height: 3em;
   padding: 0.25em;
 }
+
