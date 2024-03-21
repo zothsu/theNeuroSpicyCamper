@@ -132,7 +132,7 @@ table {
   font-size: 1.5rem;
   background-color: rgba(228, 237, 213, 0.8);
   padding: 2em;
-  margin: 5em;
+  margin: 0 auto;
 }
 
 table td,
@@ -155,3 +155,10 @@ table th {
   padding: 0.25em;
 }
 
+.allCampsDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1em;
+}
